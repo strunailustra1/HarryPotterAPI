@@ -15,6 +15,7 @@
 		1E942E1A2456E92200FBAB0B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E942E192456E92200FBAB0B /* SearchResult.swift */; };
 		1E942E1C2456F45200FBAB0B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E942E1B2456F45200FBAB0B /* NetworkManager.swift */; };
 		1E942E1E24572CE900FBAB0B /* HousesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E942E1D24572CE900FBAB0B /* HousesViewController.swift */; };
+		1E942E2024582B9F00FBAB0B /* DetailHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E942E1F24582B9F00FBAB0B /* DetailHouseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1E942E192456E92200FBAB0B /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		1E942E1B2456F45200FBAB0B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1E942E1D24572CE900FBAB0B /* HousesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewController.swift; sourceTree = "<group>"; };
+		1E942E1F24582B9F00FBAB0B /* DetailHouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHouseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				1E942E072456E8FE00FBAB0B /* SceneDelegate.swift */,
 				1E942E192456E92200FBAB0B /* SearchResult.swift */,
 				1E942E1B2456F45200FBAB0B /* NetworkManager.swift */,
+				1E942E1F24582B9F00FBAB0B /* DetailHouseViewController.swift */,
 				1E942E1D24572CE900FBAB0B /* HousesViewController.swift */,
 				1E942E0B2456E8FE00FBAB0B /* Main.storyboard */,
 				1E942E0E2456E90100FBAB0B /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				1E942E062456E8FE00FBAB0B /* AppDelegate.swift in Sources */,
 				1E942E1C2456F45200FBAB0B /* NetworkManager.swift in Sources */,
 				1E942E1A2456E92200FBAB0B /* SearchResult.swift in Sources */,
+				1E942E2024582B9F00FBAB0B /* DetailHouseViewController.swift in Sources */,
 				1E942E082456E8FE00FBAB0B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,6 +30,7 @@ class NetworkManager {
                 housesVC.houses = houses
                 
                 DispatchQueue.main.async {
+                    housesVC.activityLabel.stopAnimating()
                     housesVC.tableView.reloadData()
                 }
                 

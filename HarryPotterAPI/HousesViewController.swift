@@ -10,11 +10,15 @@ import UIKit
 
 class HousesViewController: UITableViewController {
 
+    let activityLabel = UIActivityIndicatorView(style: .medium)
     var houses: [House] = []
   
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkManager.shared.fetchHouses(housesVC: self)
+        tableView.backgroundView = activityLabel
+        activityLabel.hidesWhenStopped = true
+        activityLabel.startAnimating()
     }
 
     // MARK: - Table view data source
@@ -28,16 +32,17 @@ class HousesViewController: UITableViewController {
         
         return cell
     }
-  
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let house = houses[indexPath.row]
+        performSegue(withIdentifier: "showHouse", sender: house)
     }
-    */
-
+  
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showHouse" {
+            let detailVC = segue.destination as! DetailHouseViewController
+            detailVC.house = sender as? House
+        }
+    }
 }
