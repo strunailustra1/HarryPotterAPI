@@ -59,7 +59,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZRq-LO-qIu">
-                                <rect key="frame" x="30" y="240" width="260" height="41"/>
+                                <rect key="frame" x="30" y="265" width="260" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Founder:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeO-Qb-e7y">
                                         <rect key="frame" x="0.0" y="0.0" width="68.5" height="41"/>
@@ -76,7 +76,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0Fu-nB-xX9">
-                                <rect key="frame" x="29" y="287" width="260" height="41"/>
+                                <rect key="frame" x="29" y="312" width="260" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Head of House: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e06-e1-klC">
                                         <rect key="frame" x="0.0" y="0.0" width="123.5" height="41"/>
@@ -93,24 +93,22 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0yK-gE-2Rl">
-                                <rect key="frame" x="30" y="91.5" width="260" height="41"/>
+                                <rect key="frame" x="125" y="89.5" width="70" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZZ-KE-a1h">
-                                        <rect key="frame" x="0.0" y="0.0" width="260" height="23"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mascot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTf-ni-6Uc">
-                                        <rect key="frame" x="0.0" y="23" width="260" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🦁" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZZ-KE-a1h">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Rud-HT-nLW"/>
+                                            <constraint firstAttribute="height" constant="70" id="xtB-oI-3q7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zCj-VR-K3T">
-                                <rect key="frame" x="30" y="140.5" width="260" height="20.5"/>
+                                <rect key="frame" x="30" y="165.5" width="260" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colors:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcE-6q-uAf">
                                         <rect key="frame" x="0.0" y="0.0" width="126" height="20.5"/>
@@ -127,7 +125,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T2O-dU-LzN">
-                                <rect key="frame" x="30" y="167" width="260" height="61"/>
+                                <rect key="frame" x="30" y="192" width="260" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Values house:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyf-bz-NYn">
                                         <rect key="frame" x="0.0" y="0.0" width="106.5" height="61"/>
@@ -144,7 +142,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="3tc-vy-ImG">
-                                <rect key="frame" x="29" y="334" width="260" height="41"/>
+                                <rect key="frame" x="29" y="359" width="260" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House ghost:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu2-ZB-ULf">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="41"/>
@@ -163,16 +161,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0yK-gE-2Rl" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="30" id="8Q9-Ha-xJJ"/>
-                            <constraint firstItem="0yK-gE-2Rl" firstAttribute="top" secondItem="EAQ-7I-p8P" secondAttribute="bottom" constant="8" id="9Iu-Bk-cbE"/>
                             <constraint firstItem="3tc-vy-ImG" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="29" id="BEa-nK-i3I"/>
                             <constraint firstItem="zCj-VR-K3T" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="30" id="BUs-2j-O3i"/>
                             <constraint firstItem="T2O-dU-LzN" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="30" id="DIK-G3-hZM"/>
                             <constraint firstItem="ZRq-LO-qIu" firstAttribute="top" secondItem="T2O-dU-LzN" secondAttribute="bottom" constant="12" id="NH2-Bb-11T"/>
+                            <constraint firstItem="0yK-gE-2Rl" firstAttribute="top" secondItem="EAQ-7I-p8P" secondAttribute="bottom" constant="6" id="PmI-R3-p8f"/>
                             <constraint firstItem="T2O-dU-LzN" firstAttribute="top" secondItem="zCj-VR-K3T" secondAttribute="bottom" constant="6" id="PrC-cU-Fy6"/>
                             <constraint firstItem="0Fu-nB-xX9" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="29" id="QZf-Pv-uoT"/>
                             <constraint firstItem="81P-sq-kIG" firstAttribute="trailing" secondItem="EAQ-7I-p8P" secondAttribute="trailing" constant="30" id="UVe-Ck-Vmk"/>
-                            <constraint firstItem="zCj-VR-K3T" firstAttribute="top" secondItem="0yK-gE-2Rl" secondAttribute="bottom" constant="8" id="WrK-4I-KTI"/>
                             <constraint firstItem="3tc-vy-ImG" firstAttribute="top" secondItem="0Fu-nB-xX9" secondAttribute="bottom" constant="6" id="XqZ-P1-Ntl"/>
                             <constraint firstAttribute="trailing" secondItem="3tc-vy-ImG" secondAttribute="trailing" constant="31" id="Y9C-FB-3DZ"/>
                             <constraint firstItem="ZRq-LO-qIu" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="30" id="ZqN-Oe-Tqj"/>
@@ -181,9 +177,10 @@
                             <constraint firstItem="81P-sq-kIG" firstAttribute="trailing" secondItem="ZRq-LO-qIu" secondAttribute="trailing" constant="30" id="cbD-b1-F6R"/>
                             <constraint firstItem="EAQ-7I-p8P" firstAttribute="leading" secondItem="PZG-Ub-Lb3" secondAttribute="leading" constant="30" id="gbG-VS-yXL"/>
                             <constraint firstItem="EAQ-7I-p8P" firstAttribute="top" secondItem="81P-sq-kIG" secondAttribute="top" constant="6" id="hJT-Le-bxS"/>
-                            <constraint firstItem="81P-sq-kIG" firstAttribute="trailing" secondItem="0yK-gE-2Rl" secondAttribute="trailing" constant="30" id="jV5-gq-eU3"/>
                             <constraint firstItem="0Fu-nB-xX9" firstAttribute="top" secondItem="ZRq-LO-qIu" secondAttribute="bottom" constant="6" id="mP0-Xd-utR"/>
                             <constraint firstItem="81P-sq-kIG" firstAttribute="trailing" secondItem="0Fu-nB-xX9" secondAttribute="trailing" constant="31" id="q8f-Ga-ngn"/>
+                            <constraint firstItem="0yK-gE-2Rl" firstAttribute="centerX" secondItem="PZG-Ub-Lb3" secondAttribute="centerX" id="t7I-Ar-gvB"/>
+                            <constraint firstItem="zCj-VR-K3T" firstAttribute="top" secondItem="0yK-gE-2Rl" secondAttribute="bottom" constant="6" id="wdc-a6-XXr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="81P-sq-kIG"/>
                     </view>
@@ -201,11 +198,11 @@
             </objects>
             <point key="canvasLocation" x="1898" y="56"/>
         </scene>
-        <!--Item-->
+        <!--Houses-->
         <scene sceneID="Uf6-ka-2TA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nlX-jr-eoW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LKh-u4-cmF"/>
+                    <tabBarItem key="tabBarItem" title="Houses" image="house.fill" catalog="system" id="LKh-u4-cmF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TQ3-U5-OrI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -226,6 +223,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fY0-UW-aUv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gJY-CC-yL1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -238,4 +236,7 @@
             <point key="canvasLocation" x="-240" y="57"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
+    </resources>
 </document>

@@ -5,6 +5,7 @@
 //  Created by Наталья Мирная on 27.04.2020.
 //  Copyright © 2020 Наталья Мирная. All rights reserved.
 //
+import UIKit
 
 struct SearchResult: Decodable {
     let house: [House]?
@@ -22,6 +23,16 @@ struct House: Decodable {
     let members: [String]?
     let values: [String]?
     let colors: [String]?
+    
+    var emoji: String {
+        let mascotType = MascotType(rawValue: mascot ?? "") ?? MascotType.unknown
+        return mascotType.icon
+    }
+    
+    var emojiBackground: CGColor {
+        let mascotType = MascotType(rawValue: mascot ?? "") ?? MascotType.unknown
+        return mascotType.colorOfIcon
+    }
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -68,3 +79,41 @@ struct Character: Decodable {
     }
 }
 
+enum MascotType: String {
+    case lion = "lion"
+    case eagle = "eagle"
+    case serpent = "serpent"
+    case badger = "badger"
+    
+    case unknown = "unknown"
+    
+    var icon: String {
+        switch self {
+        case .lion:
+            return "🦁"
+        case .eagle:
+            return "🦅"
+        case .serpent:
+            return "🐍"
+        case .badger:
+            return "🦡"
+        case .unknown:
+            return "❓"
+        }
+    }
+    
+    var colorOfIcon: CGColor {
+        switch self {
+        case .lion:
+            return CGColor(srgbRed: 175/255, green: 34/255, blue: 36/255, alpha: 1.0)
+        case .eagle:
+            return CGColor(srgbRed: 45/255, green: 123/255, blue: 215/255, alpha: 1.0)
+        case .serpent:
+            return CGColor(srgbRed: 0/255, green: 94/255, blue: 53/255, alpha: 1.0)
+        case .badger:
+            return CGColor(srgbRed: 215/255, green: 187/255, blue: 71/255, alpha: 1.0)
+        case .unknown:
+            return CGColor(srgbRed: 190/255, green: 60/255, blue: 36/255, alpha: 1.0)
+        }
+    }
+}
