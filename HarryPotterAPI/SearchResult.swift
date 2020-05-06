@@ -62,6 +62,11 @@ struct Character: Decodable {
     let deathEater: Bool?
     let bloodStatus: String?
     let species: String?
+    let alias: String?
+    let patronus: String?
+    let wand: String?
+    let boggart: String?
+    let animagus: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -76,6 +81,11 @@ struct Character: Decodable {
         case deathEater = "deathEater"
         case bloodStatus = "bloodStatus"
         case species = "species"
+        case alias = "alias"
+        case patronus = "patronus"
+        case wand = "wand"
+        case boggart = "boggart"
+        case animagus = "animagus"
     }
 }
 

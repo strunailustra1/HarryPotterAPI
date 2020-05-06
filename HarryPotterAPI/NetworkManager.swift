@@ -40,8 +40,23 @@ class NetworkManager {
         }.resume()
     }
     
-    func fetchCharacters() {
-        
+    func fetchCharacters(charactersVC: CharactersViewController) {
+        guard let url = URL(string: url2) else { return }
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            guard let data = data else { return }
+            
+            do {
+                let decoder = JSONDecoder()
+                let characters = try decoder.decode([Character].self, from: data)
+                charactersVC.characters = characters
+                
+                DispatchQueue.main.async {
+                    charactersVC.tableView.reloadData()
+                }
+            } catch let error {
+                print(error)
+            }
+        }.resume()
     }
 }
 

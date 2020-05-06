@@ -10,7 +10,6 @@ import UIKit
 
 class DetailHouseViewController: UIViewController {
     
-    @IBOutlet weak var houseNameLabel: UILabel!
     @IBOutlet weak var mascotNameLabel: UILabel!
     @IBOutlet weak var colorsHouseLabel: UILabel!
     @IBOutlet weak var valuesLabel: UILabel!
@@ -21,7 +20,6 @@ class DetailHouseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  houseNameLabel.text = house.name
         mascotNameLabel.text = house.emoji
         colorsHouseLabel.text = house.colors?.joined(separator: ", ")
         valuesLabel.text = house.values?.joined(separator: ", ")
@@ -30,7 +28,7 @@ class DetailHouseViewController: UIViewController {
         houseGhostLabel.text = house.houseGhost
         
         navigationItem.title = house.name
-        navigationItem.hidesBackButton = true
+        
         
 //        mascotNameLabel.layer.borderWidth = 2
 //        mascotNameLabel.layer.borderColor = CGColor(srgbRed: 125/255,
