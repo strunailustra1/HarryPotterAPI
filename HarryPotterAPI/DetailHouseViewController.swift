@@ -16,6 +16,7 @@ class DetailHouseViewController: UIViewController {
     @IBOutlet weak var founderLabel: UILabel!
     @IBOutlet weak var houseGhostLabel: UILabel!
     @IBOutlet weak var headOfHouseLabel: UILabel!
+    
     var house: House!
 
     override func viewDidLoad() {
@@ -28,19 +29,14 @@ class DetailHouseViewController: UIViewController {
         houseGhostLabel.text = house.houseGhost
         
         navigationItem.title = house.name
-        
-        
-//        mascotNameLabel.layer.borderWidth = 2
-//        mascotNameLabel.layer.borderColor = CGColor(srgbRed: 125/255,
-//                                                    green: 100/255,
-//                                                    blue: 200/255,
-//                                                    alpha: 1.0)
+        setMascot()
+    }
+    
+    private func setMascot() {
         mascotNameLabel.layer.backgroundColor = house.emojiBackground
         mascotNameLabel.layer.cornerRadius = mascotNameLabel.frame.width / 2
     }
     
-
-
     /*
     // MARK: - Navigation
 
@@ -50,5 +46,4 @@ class DetailHouseViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

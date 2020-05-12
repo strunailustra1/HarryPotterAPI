@@ -57,7 +57,7 @@ struct Character: Decodable {
     let school: String?
     let v: Int?
     let ministryOfMagic: Bool?
-    let orderOfFenix: Bool?
+    let orderOfThePhoenix: Bool?
     let dumbledoresArmy: Bool?
     let deathEater: Bool?
     let bloodStatus: String?
@@ -76,7 +76,7 @@ struct Character: Decodable {
         case house = "house"
         case school = "school"
         case ministryOfMagic = "ministryOfMagic"
-        case orderOfFenix = "orderOfFenix"
+        case orderOfThePhoenix = "orderOfThePhoenix"
         case dumbledoresArmy = "dumbledoresArmy"
         case deathEater = "deathEater"
         case bloodStatus = "bloodStatus"
@@ -86,6 +86,10 @@ struct Character: Decodable {
         case wand = "wand"
         case boggart = "boggart"
         case animagus = "animagus"
+    }
+    
+    var fullName: String? {
+        "\(name ?? "")  \(alias ?? "")"
     }
 }
 

@@ -26,17 +26,59 @@ class DetailCharacterViewController: UIViewController {
     @IBOutlet weak var boggartLabel: UILabel!
     @IBOutlet weak var patronusLabel: UILabel!
     @IBOutlet weak var animagusLabel: UILabel!
+    @IBOutlet weak var memberLabel: UILabel!
+    @IBOutlet weak var bloodStatusLabel: UILabel!
+    @IBOutlet weak var speciesLabel: UILabel!
+    @IBOutlet weak var roleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var aliasLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = character.name
+        nameLabel.text = character.name
+        aliasLabel.text = character.alias
         houseLabel.text = character.house
         schoolLabel.text = character.school
-        ministryOfMagicLabel.text = character.ministryOfMagic ?? false ? "yes" : "no"
-        orderOfThePhoenix.text = character.orderOfFenix ?? false ? "yes" : "no"
-        deathEaterLabel.text = character.deathEater ?? false ? "yes" : "no"
-        dumbledoresArmyLabel.text = character.dumbledoresArmy ?? false ? "yes" : "no"
-        //  wandLabel.text = character.wand != nil ? character.wand : "unknown"
+        roleLabel.text = character.role
+        bloodStatusLabel.text = character.bloodStatus
+        speciesLabel.text = character.species
+        hideLabels()
+    }
+    
+    private func hideLabels() {
+        if character.ministryOfMagic == false,
+            character.orderOfThePhoenix == false,
+            character.dumbledoresArmy == false,
+            character.deathEater == false {
+            memberLabel.isHidden = true
+        }
+        
+        if character.ministryOfMagic == true {
+            ministryOfMagicLabel.isHidden = false
+        } else {
+            ministryOfMagicLabel.isHidden = true
+        }
+        
+        if character.orderOfThePhoenix == true {
+            orderOfThePhoenix.isHidden = false
+        } else {
+            orderOfThePhoenix.isHidden = true
+        }
+        
+        if character.dumbledoresArmy == true {
+            dumbledoresArmyLabel.isHidden = false
+        } else {
+            dumbledoresArmyLabel.isHidden = true
+        }
+        
+        if character.deathEater == true {
+            deathEaterLabel.isHidden = false
+        } else {
+            deathEaterLabel.isHidden = true
+        }
+        
         if let _ = character.wand {
             wandNameLabel.text = character.wand
         } else {
@@ -44,19 +86,28 @@ class DetailCharacterViewController: UIViewController {
             wandNameLabel.isHidden = true
         }
         
-        boggartNameLabel.text = character.boggart != nil ? character.boggart : "unknown"
-        animagusNameLabel.text = character.animagus != nil ? character.animagus : "unknown"
-        navigationItem.title = character.name
-        //  patronusNameLabel.text = character.patronus != nil ? character.patronus : "unknown"
-        guard let _ = character.patronus else {
-            patronusLabel.isHidden = true
-            patronusNameLabel.isHidden = true
-            return
+        if let _ = character.boggart {
+            boggartNameLabel.text = character.boggart
+        } else {
+            boggartNameLabel.isHidden = true
+            boggartLabel.isHidden = true
         }
-        patronusNameLabel.text = character.patronus
+        
+        if let _ = character.animagus {
+            animagusNameLabel.text = character.animagus
+        } else {
+            animagusNameLabel.isHidden = true
+            animagusLabel.isHidden = true
+        }
+        
+        if let _ = character.patronus {
+            patronusNameLabel.text = character.patronus
+        } else {
+            patronusNameLabel.isHidden = true
+            patronusLabel.isHidden = true
+        }
+        
     }
-    
-    
     /*
      // MARK: - Navigation
      

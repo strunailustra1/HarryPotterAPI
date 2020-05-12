@@ -313,202 +313,227 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hufflepuff" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtF-Fc-DR2">
-                                <rect key="frame" x="102" y="52" width="116" height="30"/>
-                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Hufflepuff" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtF-Fc-DR2">
+                                <rect key="frame" x="16" y="153.5" width="154" height="20"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hogwarts School of Witchcraft and Wizardry" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-8Q-dHD">
-                                <rect key="frame" x="16" y="86" width="288" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hogwarts School of Witchcraft and Wizardry" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-8Q-dHD">
+                                <rect key="frame" x="16" y="114" width="288" height="37.5"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aV2-fq-jhX">
-                                <rect key="frame" x="16" y="130" width="288" height="99.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1hy-mU-YSr">
+                                <rect key="frame" x="16" y="312" width="288" height="19"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member of " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-c0-hk8">
-                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wand:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikb-nV-Dud">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="CSb-8X-twM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gZR-Zs-F9z">
-                                        <rect key="frame" x="0.0" y="21.5" width="239" height="18"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ministry of Magic:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9M-1v-yh4">
-                                                <rect key="frame" x="0.0" y="0.0" width="115.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFA-rW-ZCq">
-                                                <rect key="frame" x="123.5" y="0.0" width="115.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WSf-7L-CV1">
-                                        <rect key="frame" x="0.0" y="41.5" width="288" height="18"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order of the Phoenix: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-0s-YAh">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTs-Ro-ptq">
-                                                <rect key="frame" x="148" y="0.0" width="140" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="IMl-Qe-hfu">
-                                        <rect key="frame" x="0.0" y="61.5" width="266" height="18"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dumbledore's Army:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kU8-OZ-kE7">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHW-bs-Dfr">
-                                                <rect key="frame" x="134.5" y="0.0" width="131.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ev3-bd-BEh">
-                                        <rect key="frame" x="0.0" y="81.5" width="129.5" height="18"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Death Eater: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6C-9t-wkJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="84" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6e-kL-Pdx">
-                                                <rect key="frame" x="92" y="0.0" width="37.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" placeholderIntrinsicWidth="64.5" placeholderIntrinsicHeight="19" text="wand" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tb5-IP-qm6">
+                                        <rect key="frame" x="54" y="0.0" width="234" height="19"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="87k-N1-Oox">
-                                <rect key="frame" x="16" y="237.5" width="288" height="94"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aV2-fq-jhX">
+                                <rect key="frame" x="16" y="201" width="144.5" height="103"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="91" placeholderIntrinsicHeight="20.5" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MeK-5c-hhW">
-                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="20.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="wand:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikb-nV-Dud">
-                                                <rect key="frame" x="0.0" y="0.0" width="43.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wand2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tb5-IP-qm6">
-                                                <rect key="frame" x="47.5" y="0.0" width="51" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="XfW-j5-fiH">
-                                        <rect key="frame" x="0.0" y="24.5" width="128" height="20.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="boggart:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ed-vX-Nh5">
-                                                <rect key="frame" x="0.0" y="0.0" width="62.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="boggart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mQ-ae-beU">
-                                                <rect key="frame" x="66.5" y="0.0" width="61.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="66m-Vg-ea8">
-                                        <rect key="frame" x="0.0" y="49" width="141" height="20.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patronus:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeV-Qn-Mkx">
-                                                <rect key="frame" x="0.0" y="0.0" width="69" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patronus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tm-Cf-YMr">
-                                                <rect key="frame" x="73" y="0.0" width="68" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GdK-Ko-dU2">
-                                        <rect key="frame" x="0.0" y="73.5" width="152.5" height="20.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="animagus:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TH-ft-DyW">
-                                                <rect key="frame" x="0.0" y="0.0" width="74.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="animagus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvs-dS-teC">
-                                                <rect key="frame" x="78.5" y="0.0" width="74" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member of " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-c0-hk8">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="19"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ministry of Magic" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9M-1v-yh4">
+                                        <rect key="frame" x="0.0" y="21" width="117.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order of the Phoenix" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-0s-YAh">
+                                        <rect key="frame" x="0.0" y="42" width="144.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dumbledore's Army" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kU8-OZ-kE7">
+                                        <rect key="frame" x="0.0" y="63" width="137.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Death Eater" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6C-9t-wkJ">
+                                        <rect key="frame" x="0.0" y="84" width="82" height="19"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-JY-vZM">
+                                <rect key="frame" x="16" y="354" width="288" height="19"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patronus:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeV-Qn-Mkx">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="3Nb-WS-qpt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="patronus" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tm-Cf-YMr">
+                                        <rect key="frame" x="82" y="0.0" width="206" height="19"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aub-Kn-T8k">
+                                <rect key="frame" x="60" y="94.5" width="200" height="17.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bloodStatus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmf-yK-s4v">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="species" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0m-aM-JUW">
+                                        <rect key="frame" x="101" y="0.0" width="99" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Boy Who Lived" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gq-vK-rYV">
+                                <rect key="frame" x="60" y="71.5" width="200" height="19"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-bn-TLj">
+                                <rect key="frame" x="60" y="48" width="200" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="role" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3o-QH-m07">
+                                <rect key="frame" x="16" y="175.5" width="25" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN4-me-H0O">
+                                <rect key="frame" x="16" y="333" width="288" height="19"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="boggart:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ed-vX-Nh5">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="6Lg-Qh-ZlB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="boggart" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mQ-ae-beU">
+                                        <rect key="frame" x="64" y="0.0" width="224" height="19"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sZY-5R-RJe">
+                                <rect key="frame" x="16" y="375" width="288" height="19"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="animagus:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TH-ft-DyW">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="2Bq-dv-I1l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="animagus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvs-dS-teC">
+                                        <rect key="frame" x="82" y="0.0" width="206" height="19"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="87k-N1-Oox" firstAttribute="top" secondItem="aV2-fq-jhX" secondAttribute="bottom" constant="8" id="4bp-Lv-O8E"/>
-                            <constraint firstItem="1Rb-8Q-dHD" firstAttribute="top" secondItem="dtF-Fc-DR2" secondAttribute="bottom" constant="4" id="NlZ-1k-faI"/>
-                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="aV2-fq-jhX" secondAttribute="trailing" constant="16" id="RU1-Lf-Yk2"/>
-                            <constraint firstItem="dtF-Fc-DR2" firstAttribute="top" secondItem="Oq1-mM-p1L" secondAttribute="top" constant="8" id="UoJ-cV-rfE"/>
-                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="dtF-Fc-DR2" secondAttribute="trailing" constant="102" id="YWY-ox-CAm"/>
-                            <constraint firstItem="87k-N1-Oox" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="a1l-qZ-B6o"/>
+                            <constraint firstItem="3gq-vK-rYV" firstAttribute="top" secondItem="ecT-bn-TLj" secondAttribute="bottom" constant="2" id="12m-fu-fv8"/>
+                            <constraint firstItem="I3o-QH-m07" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="5Qh-C7-sCH"/>
+                            <constraint firstItem="tN4-me-H0O" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="8dE-CR-v9x"/>
+                            <constraint firstItem="aub-Kn-T8k" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="60" id="AEB-gT-wdN"/>
+                            <constraint firstItem="I3o-QH-m07" firstAttribute="top" secondItem="dtF-Fc-DR2" secondAttribute="bottom" constant="2" id="AGX-xM-Fbo"/>
+                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="3gq-vK-rYV" secondAttribute="trailing" constant="60" id="BdL-IP-wjS"/>
+                            <constraint firstItem="ecT-bn-TLj" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="60" id="Dds-Xw-wfG"/>
+                            <constraint firstItem="3gq-vK-rYV" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="60" id="Do3-Hn-oDR"/>
+                            <constraint firstItem="ecT-bn-TLj" firstAttribute="top" secondItem="Oq1-mM-p1L" secondAttribute="top" constant="4" id="EV2-Hi-U3n"/>
+                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="1hy-mU-YSr" secondAttribute="trailing" constant="16" id="EVh-QO-ohf"/>
+                            <constraint firstItem="1Rb-8Q-dHD" firstAttribute="top" secondItem="aub-Kn-T8k" secondAttribute="bottom" constant="2" id="FPY-4N-vvG"/>
+                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="aub-Kn-T8k" secondAttribute="trailing" constant="60" id="Jc8-kb-83G"/>
+                            <constraint firstItem="1hy-mU-YSr" firstAttribute="top" secondItem="aV2-fq-jhX" secondAttribute="bottom" constant="8" id="JdJ-fH-SLr"/>
+                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="DbK-JY-vZM" secondAttribute="trailing" constant="16" id="M2l-gX-8fV"/>
+                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="ecT-bn-TLj" secondAttribute="trailing" constant="60" id="Nev-I0-tMz"/>
+                            <constraint firstItem="sZY-5R-RJe" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="Pal-FD-9jO"/>
+                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="sZY-5R-RJe" secondAttribute="trailing" constant="16" id="Po1-fl-PGG"/>
+                            <constraint firstItem="dtF-Fc-DR2" firstAttribute="top" secondItem="1Rb-8Q-dHD" secondAttribute="bottom" constant="2" id="QTW-XO-qyR"/>
+                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="aub-Kn-T8k" secondAttribute="trailing" constant="60" id="S6s-Q4-9Qd"/>
+                            <constraint firstItem="DbK-JY-vZM" firstAttribute="top" secondItem="tN4-me-H0O" secondAttribute="bottom" constant="2" id="SNG-9o-HkV"/>
+                            <constraint firstItem="DbK-JY-vZM" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="UjJ-us-8nb"/>
+                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="dtF-Fc-DR2" secondAttribute="trailing" constant="150" id="YWY-ox-CAm"/>
                             <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="1Rb-8Q-dHD" secondAttribute="trailing" constant="16" id="bV6-OQ-fp6"/>
                             <constraint firstItem="1Rb-8Q-dHD" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="cz0-4R-g9N"/>
-                            <constraint firstItem="dtF-Fc-DR2" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="102" id="dcm-NX-06i"/>
-                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="87k-N1-Oox" secondAttribute="trailing" constant="16" id="my6-0I-3c8"/>
-                            <constraint firstItem="aV2-fq-jhX" firstAttribute="top" secondItem="1Rb-8Q-dHD" secondAttribute="bottom" constant="8" id="nJ0-8f-gbf"/>
+                            <constraint firstItem="dtF-Fc-DR2" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="dcm-NX-06i"/>
+                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="tN4-me-H0O" secondAttribute="trailing" constant="16" id="fOI-BX-qfM"/>
+                            <constraint firstItem="1hy-mU-YSr" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="fZM-TJ-Iwo"/>
+                            <constraint firstItem="sZY-5R-RJe" firstAttribute="top" secondItem="DbK-JY-vZM" secondAttribute="bottom" constant="2" id="ouR-Mt-2VD"/>
                             <constraint firstItem="aV2-fq-jhX" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="q2y-Bi-VSJ"/>
+                            <constraint firstItem="aV2-fq-jhX" firstAttribute="top" secondItem="I3o-QH-m07" secondAttribute="bottom" constant="8" id="syM-k2-Yx9"/>
+                            <constraint firstItem="aub-Kn-T8k" firstAttribute="top" secondItem="3gq-vK-rYV" secondAttribute="bottom" constant="4" id="tjr-IX-VEA"/>
+                            <constraint firstItem="tN4-me-H0O" firstAttribute="top" secondItem="1hy-mU-YSr" secondAttribute="bottom" constant="2" id="wBv-jG-yec"/>
+                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I3o-QH-m07" secondAttribute="trailing" constant="16" id="zeT-bd-eTK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Oq1-mM-p1L"/>
                     </view>
                     <navigationItem key="navigationItem" id="ix4-xg-hBq"/>
                     <connections>
+                        <outlet property="aliasLabel" destination="3gq-vK-rYV" id="atR-8T-NvS"/>
                         <outlet property="animagusLabel" destination="0TH-ft-DyW" id="jZg-5T-NRk"/>
                         <outlet property="animagusNameLabel" destination="gvs-dS-teC" id="7BH-LP-Qai"/>
+                        <outlet property="bloodStatusLabel" destination="pmf-yK-s4v" id="hbJ-77-KKE"/>
                         <outlet property="boggartLabel" destination="6Ed-vX-Nh5" id="MmT-mk-U2r"/>
                         <outlet property="boggartNameLabel" destination="4mQ-ae-beU" id="ZGd-T4-gJ3"/>
-                        <outlet property="deathEaterLabel" destination="z6e-kL-Pdx" id="dgY-Xn-zzz"/>
-                        <outlet property="dumbledoresArmyLabel" destination="cHW-bs-Dfr" id="Ov2-xK-yUT"/>
+                        <outlet property="deathEaterLabel" destination="l6C-9t-wkJ" id="t80-R2-Wrz"/>
+                        <outlet property="dumbledoresArmyLabel" destination="kU8-OZ-kE7" id="qqG-Gc-YzP"/>
                         <outlet property="houseLabel" destination="dtF-Fc-DR2" id="Gbs-u2-ff9"/>
-                        <outlet property="ministryOfMagicLabel" destination="gFA-rW-ZCq" id="lDT-Ah-YaR"/>
-                        <outlet property="orderOfThePhoenix" destination="sTs-Ro-ptq" id="U1O-oJ-ms2"/>
+                        <outlet property="memberLabel" destination="Gpx-c0-hk8" id="TVt-1P-uLe"/>
+                        <outlet property="ministryOfMagicLabel" destination="X9M-1v-yh4" id="6H3-1l-Ogo"/>
+                        <outlet property="nameLabel" destination="ecT-bn-TLj" id="gKv-an-49L"/>
+                        <outlet property="orderOfThePhoenix" destination="zEq-0s-YAh" id="DkH-AY-8D5"/>
                         <outlet property="patronusLabel" destination="aeV-Qn-Mkx" id="F16-Az-MJb"/>
                         <outlet property="patronusNameLabel" destination="7tm-Cf-YMr" id="pqj-CO-nJV"/>
+                        <outlet property="roleLabel" destination="I3o-QH-m07" id="3FN-ig-6C6"/>
                         <outlet property="schoolLabel" destination="1Rb-8Q-dHD" id="HCe-VC-Xfv"/>
+                        <outlet property="speciesLabel" destination="A0m-aM-JUW" id="1wZ-Ib-J6N"/>
                         <outlet property="wandLabel" destination="Ikb-nV-Dud" id="WnW-X3-wee"/>
                         <outlet property="wandNameLabel" destination="Tb5-IP-qm6" id="gZa-Hz-Z8h"/>
                     </connections>

@@ -8,13 +8,20 @@
 
 import UIKit
 
-class CharactersViewController: UITableViewController {
+class CharactersViewController: UITableViewController, UISearchResultsUpdating {
+    
+    let activityLabel = UIActivityIndicatorView(style: .medium)
+    let searchBar = UISearchController(searchResultsController: nil)
     
     var characters: [Character] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkManager.shared.fetchCharacters(charactersVC: self)
+        setNavigationController()
+        setActivityIndicator()
+        searchCharacter()
+        updateSearchResults(for: searchBar)
     }
     
     // MARK: - Table view data source
@@ -46,5 +53,30 @@ class CharactersViewController: UITableViewController {
             let characterVC = segue.destination as! DetailCharacterViewController
             characterVC.character = sender as? Character
         }
+    }
+    
+    private func setActivityIndicator() {
+        tableView.backgroundView = activityLabel
+        activityLabel.hidesWhenStopped = true
+        activityLabel.startAnimating()
+    }
+    
+    private func setNavigationController() {
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "Academy Engraved LET", size: 22.0)!]
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        print(text)
+    }
+    
+    func searchCharacter() {
+        searchBar.searchResultsUpdater = self
+        searchBar.obscuresBackgroundDuringPresentation = false
+        searchBar.searchBar.placeholder = "Name"
+        navigationItem.searchController = searchBar
     }
 }

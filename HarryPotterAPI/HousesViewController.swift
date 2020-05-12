@@ -16,13 +16,9 @@ class HousesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkManager.shared.fetchHouses(housesVC: self)
-        tableView.backgroundView = activityLabel
-        activityLabel.hidesWhenStopped = true
-        activityLabel.startAnimating()
-        
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont(name: "Academy Engraved LET", size: 25.0)!]
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+        setActivityIndicator()
+        setNavigationController()
     }
 
     // MARK: - Table view data source
@@ -34,7 +30,6 @@ class HousesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "houseCell", for: indexPath)
         cell.textLabel?.text = houses[indexPath.row].name
         cell.textLabel?.font = UIFont(name: "Baskerville", size: 20.0)
-        
         return cell
     }
     
@@ -49,5 +44,18 @@ class HousesViewController: UITableViewController {
             let detailVC = segue.destination as! DetailHouseViewController
             detailVC.house = sender as? House
         }
+    }
+    
+    private func setActivityIndicator() {
+        tableView.backgroundView = activityLabel
+        activityLabel.hidesWhenStopped = true
+        activityLabel.startAnimating()
+    }
+    
+    private func setNavigationController() {
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "Academy Engraved LET", size: 22.0)!]
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.tintColor = .black
     }
 }
