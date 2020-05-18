@@ -48,10 +48,14 @@ class NetworkManager {
             do {
                 let decoder = JSONDecoder()
                 let characters = try decoder.decode([Character].self, from: data)
-                charactersVC.characters = characters
+
                 
                 DispatchQueue.main.async {
-                    charactersVC.tableView.reloadData()
+                    charactersVC.charactersForTable = characters
+                    charactersVC.charactersFromApi = characters
+                    
+                    charactersVC.activityLabel.stopAnimating()
+                    //charactersVC.tableView.reloadData()
                 }
             } catch let error {
                 print(error)
