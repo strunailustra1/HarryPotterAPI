@@ -144,3 +144,14 @@ enum BloodStatus: String, CaseIterable {
         rawValue.description
     }
 }
+
+enum Houses: String, CaseIterable {
+    case gryffindor = "Gryffindor"
+    case ravenclaw = "Ravenclaw"
+    case slytherin = "Slytherin"
+    case hufflepuff = "Hufflepuff"
+    
+    var description: String {
+        rawValue.description
+    }
+}

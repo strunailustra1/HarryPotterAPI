@@ -15,10 +15,10 @@ class SearchTokenViewCell: UITableViewCell {
 
     var token: UISearchToken! {
       didSet {
-        guard let house = token?.representedObject as? String else {
+        guard let house = token?.representedObject as? Houses else {
           return
         }
-        tokenLabel.text = "Search by \(house)"
+        tokenLabel.text = "Search by \(house.description)"
         tokenImage.image = UIImage(systemName: "house.fill")
       //  tokenImage.tintColor = .clear
       }

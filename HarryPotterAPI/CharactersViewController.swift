@@ -203,26 +203,20 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
 
 extension CharactersViewController {
     func makeTokens() {
-        // todo fix it
-        let houses = ["Gryffindor", "Ravenclaw", "Slytherin", "Hufflepuff"]
+        
+        let houses = Houses.allCases
         searchTokens = houses.map { (house) -> UISearchToken in
             let tokenImage = UIImage(systemName: "house.fill")
             let token = UISearchToken(icon: tokenImage, text: house.description)
-            token.representedObject = house.description
+            token.representedObject = Houses(rawValue: house.description)
             return token
         }
-        
-        
-        //    // 1
-        //    let continents = Continent.allCases
-        //    searchTokens = continents.map { (continent) -> UISearchToken in
-        //      // 2
-        //      let globeImage = UIImage(systemName: "globe")
-        //      let token = UISearchToken(icon: globeImage, text: continent.description)
-        //      // 3
-        //      token.representedObject = Continent(rawValue: continent.description)
-        //      // 4
-        //      return token
-        //    }
+//        let houses = ["Gryffindor", "Ravenclaw", "Slytherin", "Hufflepuff"]
+//        searchTokens = houses.map { (house) -> UISearchToken in
+//            let tokenImage = UIImage(systemName: "house.fill")
+//            let token = UISearchToken(icon: tokenImage, text: house.description)
+//            token.representedObject = house.description
+//            return token
+//        }
     }
 }
