@@ -9,6 +9,7 @@ import UIKit
 
 struct SearchResult: Decodable {
     let house: [House]?
+    let character: [Character]?
 }
 
 struct House: Decodable {
@@ -129,5 +130,17 @@ enum MascotType: String {
         case .unknown:
             return CGColor(srgbRed: 190/255, green: 60/255, blue: 36/255, alpha: 1.0)
         }
+    }
+}
+
+enum BloodStatus: String, CaseIterable {
+    case noType = "all"
+    case pureBlood = "pure-blood"
+    case halfBlood = "half-blood"
+    case unknown = "unknown"
+    case mugleBorn = "muggle-born"
+    
+    var description: String {
+        rawValue.description
     }
 }

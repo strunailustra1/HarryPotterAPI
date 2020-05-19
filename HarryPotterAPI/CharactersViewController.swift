@@ -12,6 +12,7 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     
     let activityLabel = UIActivityIndicatorView(style: .medium)
     let searchController = UISearchController(searchResultsController: nil)
+  //  let bloodStatus = ["pure-blood", "half-blood", "unknown", "muggle-born"]
     
     var charactersForTable: [Character]? = [] {
         didSet {
@@ -36,7 +37,7 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     var isSearchingByTokens: Bool {
         return
             searchController.isActive &&
-            searchController.searchBar.searchTextField.tokens.count > 0
+                searchController.searchBar.searchTextField.tokens.count > 0
     }
     
     var isSearchingByName: Bool {
@@ -83,8 +84,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     }
     
     // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCharacter" {
             let characterVC = segue.destination as! DetailCharacterViewController
@@ -93,28 +92,39 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     }
     // MARK: - Search
     func searchFor(_ searchText: String?) {
+        print("searchFor")
         guard searchController.isActive else { return }
         guard let searchText = searchText else {
             charactersForTable = nil
             return
         }
-        
-        //print(searchText)
-        
+        let selectedBloodStatus = selectedScopeBloodStatus()
         let filteredCharacters = charactersFromApi.filter { (character) -> Bool in
+            let isMatchingBloodStatus = selectedBloodStatus == BloodStatus.noType.description ?
+                true : (character.bloodStatus == selectedBloodStatus)
             let isMatchingTokens = searchHouses.count == 0 ? true : searchHouses.contains(character.house ?? "")
-          
+            
             if !searchText.isEmpty {
-              return
-                    isMatchingTokens &&
-                    (character.name?.lowercased().contains(searchText.lowercased()) ?? false)
+                return
+                    isMatchingBloodStatus &&
+                        isMatchingTokens &&
+                        (character.name?.lowercased().contains(searchText.lowercased()) ?? false)
             } else if isSearchingByTokens {
-              return isMatchingTokens
+                return isMatchingBloodStatus && isMatchingTokens
             }
             return false
         }
         charactersForTable = filteredCharacters.count > 0 ? filteredCharacters : nil
         print("Установили charactersForTable = " + String(charactersForTable?.count ?? 0) + " штук")
+    }
+    
+    func selectedScopeBloodStatus() -> String {
+        print("selectedScopeBloodStatus")
+        guard let scopeButtonTitles = searchController.searchBar.scopeButtonTitles else {
+            print("scopeButtonTitles", searchController.searchBar.scopeButtonTitles)
+            return BloodStatus.noType.description
+        }
+        return scopeButtonTitles[searchController.searchBar.selectedScopeButtonIndex]
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -127,6 +137,7 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
                 print("Сбрасываем charactersForTable")
             }
         } else {
+            charactersForTable = charactersFromApi
             searchController.searchBar.searchTextField.backgroundColor = nil
         }
     }
@@ -135,32 +146,45 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
         guard searchController.searchBar.showsScopeBar != show else { return }
         searchController.searchBar.setShowsScope(show, animated: true)
         view.setNeedsLayout()
+        print("showScopeBar")
+    }
+    
+    // - MARK: SearchBar
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        guard let searchText = searchController.searchBar.text else { return }
+        searchFor(searchText)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchFor(searchText)
-        showScopeBar(true)
+        let showScope = !searchText.isEmpty
+        showScopeBar(showScope)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         print("searchBarCancelButtonClicked")
-        charactersForTable = charactersFromApi
+        charactersForTable = nil
         showScopeBar(false)
-        print(isShowSearchTokens)
+    }
+    
+    func setSearchBar() {
+        print("setSearchBar")
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Name"
+        searchController.searchBar.delegate = self
+        searchController.automaticallyShowsScopeBar = false
+        navigationItem.searchController = searchController
+        searchController.searchBar.scopeButtonTitles = BloodStatus.allCases.map {$0.description}
+        searchController.searchBar.setScopeBarButtonTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Didot", size: 8.0) as Any ], for: UIControl.State.normal)
     }
     
     func didSelect(token: UISearchToken) {
         let searchTextField = searchController.searchBar.searchTextField
         searchTextField.insertToken(token, at: searchTextField.tokens.count)
         searchFor(searchController.searchBar.text)
-    }
-    
-    func setSearchBar() {
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Name"
-        searchController.searchBar.delegate = self
-        navigationItem.searchController = searchController
+        showScopeBar(true)
+        print("didSelect - Scope Bar")
     }
     
     private func setActivityIndicator() {
@@ -176,7 +200,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
-
 
 extension CharactersViewController {
     func makeTokens() {
