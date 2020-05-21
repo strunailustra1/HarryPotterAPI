@@ -92,6 +92,16 @@ struct Character: Decodable {
     var fullName: String? {
         "\(name ?? "")  \(alias ?? "")"
     }
+    
+    var colorOfHouse: CGColor? {
+        let colorType = Houses(rawValue: house ?? "")
+        return colorType?.colorOfHouse
+    }
+    
+    var iconOfHouse: String? {
+        let iconType = Houses(rawValue: house ?? "")
+        return iconType?.iconOfHouse
+    }
 }
 
 enum MascotType: String {
@@ -153,5 +163,31 @@ enum Houses: String, CaseIterable {
     
     var description: String {
         rawValue.description
+    }
+    
+    var colorOfHouse: CGColor {
+        switch self {
+        case .gryffindor:
+            return CGColor(srgbRed: 175/255, green: 34/255, blue: 36/255, alpha: 1.0)
+        case .ravenclaw:
+            return CGColor(srgbRed: 45/255, green: 123/255, blue: 215/255, alpha: 1.0)
+        case .slytherin:
+            return CGColor(srgbRed: 0/255, green: 94/255, blue: 53/255, alpha: 1.0)
+        case .hufflepuff:
+            return CGColor(srgbRed: 190/255, green: 60/255, blue: 36/255, alpha: 1.0)
+       }
+    }
+    
+    var iconOfHouse: String {
+        switch self {
+        case .gryffindor:
+            return "🦁"
+        case .ravenclaw:
+            return "🦅"
+        case .slytherin:
+            return "🐍"
+        case .hufflepuff:
+            return "🦡"
+        }
     }
 }

@@ -30,18 +30,18 @@ class DetailCharacterViewController: UIViewController {
     @IBOutlet weak var bloodStatusLabel: UILabel!
     @IBOutlet weak var speciesLabel: UILabel!
     @IBOutlet weak var roleLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+//    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var aliasLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = character.name
-        nameLabel.text = character.name
+//        nameLabel.text = character.name
         aliasLabel.text = character.alias
         houseLabel.text = character.house
         schoolLabel.text = character.school
-        roleLabel.text = character.role
+        roleLabel.text = character.role?.lowercased()
         bloodStatusLabel.text = character.bloodStatus
         speciesLabel.text = character.species
         hideLabels()
@@ -108,6 +108,7 @@ class DetailCharacterViewController: UIViewController {
         }
         
     }
+    
     /*
      // MARK: - Navigation
      

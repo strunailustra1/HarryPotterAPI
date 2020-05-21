@@ -291,34 +291,37 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="houseCellChar" id="C4V-ir-y06" customClass="SearchTokenViewCell" customModule="HarryPotterAPI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="102" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="102" width="320" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C4V-ir-y06" id="Kc2-QR-cwv">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1e6-bn-UNv">
-                                            <rect key="frame" x="16" y="7.5" width="23.5" height="23.5"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iA-Ps-Pvg">
-                                            <rect key="frame" x="47.5" y="10" width="43.5" height="22"/>
+                                            <rect key="frame" x="34" y="10" width="43.5" height="24"/>
                                             <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🦁" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9H-p6-Bys">
+                                            <rect key="frame" x="7" y="12" width="23" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="8iA-Ps-Pvg" secondAttribute="bottom" constant="12" id="2sH-q1-Luo"/>
-                                        <constraint firstItem="1e6-bn-UNv" firstAttribute="top" secondItem="Kc2-QR-cwv" secondAttribute="top" constant="8" id="8jO-q7-2WC"/>
+                                        <constraint firstAttribute="bottom" secondItem="8iA-Ps-Pvg" secondAttribute="bottom" constant="9" id="2sH-q1-Luo"/>
+                                        <constraint firstItem="S9H-p6-Bys" firstAttribute="leading" secondItem="Kc2-QR-cwv" secondAttribute="leading" constant="7" id="4OR-cw-hcF"/>
+                                        <constraint firstItem="8iA-Ps-Pvg" firstAttribute="leading" secondItem="S9H-p6-Bys" secondAttribute="trailing" constant="4" id="8bD-kP-j3S"/>
+                                        <constraint firstItem="S9H-p6-Bys" firstAttribute="top" secondItem="Kc2-QR-cwv" secondAttribute="top" constant="12" id="99S-AZ-d3r"/>
                                         <constraint firstItem="8iA-Ps-Pvg" firstAttribute="top" secondItem="Kc2-QR-cwv" secondAttribute="top" constant="10" id="AZv-Pa-kZa"/>
-                                        <constraint firstAttribute="bottom" secondItem="1e6-bn-UNv" secondAttribute="bottom" constant="12" id="E09-3p-ikG"/>
-                                        <constraint firstItem="8iA-Ps-Pvg" firstAttribute="leading" secondItem="1e6-bn-UNv" secondAttribute="trailing" constant="8" id="o73-pX-U9M"/>
+                                        <constraint firstAttribute="bottom" secondItem="S9H-p6-Bys" secondAttribute="bottom" constant="10" id="a45-nx-XpE"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8iA-Ps-Pvg" secondAttribute="trailing" constant="100" id="un6-Sh-AWp"/>
-                                        <constraint firstItem="1e6-bn-UNv" firstAttribute="leading" secondItem="Kc2-QR-cwv" secondAttribute="leading" constant="16" id="zXu-2G-lA3"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="tokenImage" destination="1e6-bn-UNv" id="1px-3h-u4S"/>
+                                    <outlet property="tokenIcon" destination="S9H-p6-Bys" id="WGe-A0-bJw"/>
                                     <outlet property="tokenLabel" destination="8iA-Ps-Pvg" id="zdm-Yz-1Eh"/>
                                 </connections>
                             </tableViewCell>
@@ -346,19 +349,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Hufflepuff" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtF-Fc-DR2">
-                                <rect key="frame" x="16" y="153.5" width="154" height="20"/>
+                                <rect key="frame" x="16" y="130" width="154" height="20"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hogwarts School of Witchcraft and Wizardry" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-8Q-dHD">
-                                <rect key="frame" x="16" y="114" width="288" height="37.5"/>
+                                <rect key="frame" x="16" y="90.5" width="288" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1hy-mU-YSr">
-                                <rect key="frame" x="16" y="312" width="288" height="19"/>
+                                <rect key="frame" x="16" y="288.5" width="288" height="19"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wand:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikb-nV-Dud">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="19"/>
@@ -378,7 +381,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aV2-fq-jhX">
-                                <rect key="frame" x="16" y="201" width="144.5" height="103"/>
+                                <rect key="frame" x="16" y="177.5" width="144.5" height="103"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member of " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-c0-hk8">
                                         <rect key="frame" x="0.0" y="0.0" width="78" height="19"/>
@@ -413,7 +416,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-JY-vZM">
-                                <rect key="frame" x="16" y="354" width="288" height="19"/>
+                                <rect key="frame" x="16" y="330.5" width="288" height="19"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patronus:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeV-Qn-Mkx">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="19"/>
@@ -433,7 +436,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aub-Kn-T8k">
-                                <rect key="frame" x="60" y="94.5" width="200" height="17.5"/>
+                                <rect key="frame" x="60" y="71" width="200" height="17.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bloodStatus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmf-yK-s4v">
                                         <rect key="frame" x="0.0" y="0.0" width="99" height="17.5"/>
@@ -450,25 +453,19 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Boy Who Lived" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gq-vK-rYV">
-                                <rect key="frame" x="60" y="71.5" width="200" height="19"/>
+                                <rect key="frame" x="60" y="48" width="200" height="19"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-bn-TLj">
-                                <rect key="frame" x="60" y="48" width="200" height="21.5"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="role" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3o-QH-m07">
-                                <rect key="frame" x="16" y="175.5" width="25" height="17.5"/>
+                                <rect key="frame" x="16" y="152" width="25" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN4-me-H0O">
-                                <rect key="frame" x="16" y="333" width="288" height="19"/>
+                                <rect key="frame" x="16" y="309.5" width="288" height="19"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="boggart:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ed-vX-Nh5">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="19"/>
@@ -488,7 +485,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sZY-5R-RJe">
-                                <rect key="frame" x="16" y="375" width="288" height="19"/>
+                                <rect key="frame" x="16" y="351.5" width="288" height="19"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="animagus:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TH-ft-DyW">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="19"/>
@@ -510,21 +507,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="3gq-vK-rYV" firstAttribute="top" secondItem="ecT-bn-TLj" secondAttribute="bottom" constant="2" id="12m-fu-fv8"/>
                             <constraint firstItem="I3o-QH-m07" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="5Qh-C7-sCH"/>
                             <constraint firstItem="tN4-me-H0O" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="8dE-CR-v9x"/>
                             <constraint firstItem="aub-Kn-T8k" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="60" id="AEB-gT-wdN"/>
                             <constraint firstItem="I3o-QH-m07" firstAttribute="top" secondItem="dtF-Fc-DR2" secondAttribute="bottom" constant="2" id="AGX-xM-Fbo"/>
                             <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="3gq-vK-rYV" secondAttribute="trailing" constant="60" id="BdL-IP-wjS"/>
-                            <constraint firstItem="ecT-bn-TLj" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="60" id="Dds-Xw-wfG"/>
                             <constraint firstItem="3gq-vK-rYV" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="60" id="Do3-Hn-oDR"/>
-                            <constraint firstItem="ecT-bn-TLj" firstAttribute="top" secondItem="Oq1-mM-p1L" secondAttribute="top" constant="4" id="EV2-Hi-U3n"/>
                             <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="1hy-mU-YSr" secondAttribute="trailing" constant="16" id="EVh-QO-ohf"/>
                             <constraint firstItem="1Rb-8Q-dHD" firstAttribute="top" secondItem="aub-Kn-T8k" secondAttribute="bottom" constant="2" id="FPY-4N-vvG"/>
                             <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="aub-Kn-T8k" secondAttribute="trailing" constant="60" id="Jc8-kb-83G"/>
                             <constraint firstItem="1hy-mU-YSr" firstAttribute="top" secondItem="aV2-fq-jhX" secondAttribute="bottom" constant="8" id="JdJ-fH-SLr"/>
                             <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="DbK-JY-vZM" secondAttribute="trailing" constant="16" id="M2l-gX-8fV"/>
-                            <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="ecT-bn-TLj" secondAttribute="trailing" constant="60" id="Nev-I0-tMz"/>
                             <constraint firstItem="sZY-5R-RJe" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="Pal-FD-9jO"/>
                             <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="sZY-5R-RJe" secondAttribute="trailing" constant="16" id="Po1-fl-PGG"/>
                             <constraint firstItem="dtF-Fc-DR2" firstAttribute="top" secondItem="1Rb-8Q-dHD" secondAttribute="bottom" constant="2" id="QTW-XO-qyR"/>
@@ -535,6 +528,7 @@
                             <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="1Rb-8Q-dHD" secondAttribute="trailing" constant="16" id="bV6-OQ-fp6"/>
                             <constraint firstItem="1Rb-8Q-dHD" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="cz0-4R-g9N"/>
                             <constraint firstItem="dtF-Fc-DR2" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="dcm-NX-06i"/>
+                            <constraint firstItem="3gq-vK-rYV" firstAttribute="top" secondItem="Oq1-mM-p1L" secondAttribute="top" constant="4" id="f8F-hM-ASr"/>
                             <constraint firstItem="Oq1-mM-p1L" firstAttribute="trailing" secondItem="tN4-me-H0O" secondAttribute="trailing" constant="16" id="fOI-BX-qfM"/>
                             <constraint firstItem="1hy-mU-YSr" firstAttribute="leading" secondItem="Oq1-mM-p1L" secondAttribute="leading" constant="16" id="fZM-TJ-Iwo"/>
                             <constraint firstItem="sZY-5R-RJe" firstAttribute="top" secondItem="DbK-JY-vZM" secondAttribute="bottom" constant="2" id="ouR-Mt-2VD"/>
@@ -559,7 +553,6 @@
                         <outlet property="houseLabel" destination="dtF-Fc-DR2" id="Gbs-u2-ff9"/>
                         <outlet property="memberLabel" destination="Gpx-c0-hk8" id="TVt-1P-uLe"/>
                         <outlet property="ministryOfMagicLabel" destination="X9M-1v-yh4" id="6H3-1l-Ogo"/>
-                        <outlet property="nameLabel" destination="ecT-bn-TLj" id="gKv-an-49L"/>
                         <outlet property="orderOfThePhoenix" destination="zEq-0s-YAh" id="DkH-AY-8D5"/>
                         <outlet property="patronusLabel" destination="aeV-Qn-Mkx" id="F16-Az-MJb"/>
                         <outlet property="patronusNameLabel" destination="7tm-Cf-YMr" id="pqj-CO-nJV"/>

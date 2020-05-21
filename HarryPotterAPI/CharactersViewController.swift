@@ -12,7 +12,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     
     let activityLabel = UIActivityIndicatorView(style: .medium)
     let searchController = UISearchController(searchResultsController: nil)
-  //  let bloodStatus = ["pure-blood", "half-blood", "unknown", "muggle-born"]
     
     var charactersForTable: [Character]? = [] {
         didSet {
@@ -30,7 +29,7 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     var searchHouses: [String] {
         let tokens = searchController.searchBar.searchTextField.tokens
         return tokens.compactMap {
-            ($0.representedObject as? String)?.description
+            ($0.representedObject as? Houses)?.description
         }
     }
     
@@ -92,7 +91,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     }
     // MARK: - Search
     func searchFor(_ searchText: String?) {
-        print("searchFor")
         guard searchController.isActive else { return }
         guard let searchText = searchText else {
             charactersForTable = nil
@@ -119,9 +117,7 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     }
     
     func selectedScopeBloodStatus() -> String {
-        print("selectedScopeBloodStatus")
         guard let scopeButtonTitles = searchController.searchBar.scopeButtonTitles else {
-            print("scopeButtonTitles", searchController.searchBar.scopeButtonTitles)
             return BloodStatus.noType.description
         }
         return scopeButtonTitles[searchController.searchBar.selectedScopeButtonIndex]
@@ -134,7 +130,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
             
             if (!isSearchingByTokens && !isSearchingByName && searchController.isActive) {
                 charactersForTable = nil
-                print("Сбрасываем charactersForTable")
             }
         } else {
             charactersForTable = charactersFromApi
@@ -146,7 +141,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
         guard searchController.searchBar.showsScopeBar != show else { return }
         searchController.searchBar.setShowsScope(show, animated: true)
         view.setNeedsLayout()
-        print("showScopeBar")
     }
     
     // - MARK: SearchBar
@@ -162,13 +156,11 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print("searchBarCancelButtonClicked")
         charactersForTable = nil
         showScopeBar(false)
     }
     
     func setSearchBar() {
-        print("setSearchBar")
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Name"
@@ -184,7 +176,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
         searchTextField.insertToken(token, at: searchTextField.tokens.count)
         searchFor(searchController.searchBar.text)
         showScopeBar(true)
-        print("didSelect - Scope Bar")
     }
     
     private func setActivityIndicator() {
@@ -203,20 +194,13 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
 
 extension CharactersViewController {
     func makeTokens() {
-        
         let houses = Houses.allCases
         searchTokens = houses.map { (house) -> UISearchToken in
-            let tokenImage = UIImage(systemName: "house.fill")
+          //  let tokenImage = UIImage(systemName: "house.fill")
+            let tokenImage = UIImage(contentsOfFile: house.iconOfHouse)
             let token = UISearchToken(icon: tokenImage, text: house.description)
             token.representedObject = Houses(rawValue: house.description)
             return token
         }
-//        let houses = ["Gryffindor", "Ravenclaw", "Slytherin", "Hufflepuff"]
-//        searchTokens = houses.map { (house) -> UISearchToken in
-//            let tokenImage = UIImage(systemName: "house.fill")
-//            let token = UISearchToken(icon: tokenImage, text: house.description)
-//            token.representedObject = house.description
-//            return token
-//        }
     }
 }
