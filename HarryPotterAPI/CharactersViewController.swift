@@ -19,9 +19,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
         }
     }
     
-    var loadCharactersOnLoad = true
-    
-    var characters: [Character] = []
     var charactersFromApi: [Character] = []
     var searchTokens: [UISearchToken] = []
     
@@ -45,7 +42,8 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     var isSearchingByName: Bool {
         return searchController.isActive && !(searchController.searchBar.text?.isEmpty ?? true)
     }
-
+    
+    var loadCharactersOnLoad = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +59,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         isShowSearchTokens ? searchTokens.count : charactersForTable?.count ?? 0
     }
@@ -97,6 +94,7 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
             characterVC.character = sender as? Character
         }
     }
+
     // MARK: - Search
     func searchFor(_ searchText: String?) {
         guard searchController.isActive else { return }
@@ -124,13 +122,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
         print("Установили charactersForTable = " + String(charactersForTable?.count ?? 0) + " штук")
     }
     
-    func selectedScopeBloodStatus() -> String {
-        guard let scopeButtonTitles = searchController.searchBar.scopeButtonTitles else {
-            return BloodStatus.noType.description
-        }
-        return scopeButtonTitles[searchController.searchBar.selectedScopeButtonIndex]
-    }
-    
     func updateSearchResults(for searchController: UISearchController) {
         if searchController.searchBar.searchTextField.isFirstResponder {
             
@@ -147,12 +138,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
             searchController.searchBar.searchTextField.backgroundColor = UIColor(cgColor: house.colorOfHouse).withAlphaComponent(0.1)
             searchController.searchBar.searchTextField.textColor = UIColor(cgColor: house.colorOfHouse)
         }
-    }
-    
-    func showScopeBar(_ show: Bool) {
-        guard searchController.searchBar.showsScopeBar != show else { return }
-        searchController.searchBar.setShowsScope(show, animated: true)
-        view.setNeedsLayout()
     }
     
     // - MARK: SearchBar
@@ -183,14 +168,26 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
         searchController.searchBar.setScopeBarButtonTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Didot", size: 8.0) as Any ], for: UIControl.State.normal)
     }
     
+    func showScopeBar(_ show: Bool) {
+        guard searchController.searchBar.showsScopeBar != show else { return }
+        searchController.searchBar.setShowsScope(show, animated: true)
+        view.setNeedsLayout()
+    }
+    
+    func selectedScopeBloodStatus() -> String {
+        guard let scopeButtonTitles = searchController.searchBar.scopeButtonTitles else {
+            return BloodStatus.noType.description
+        }
+        return scopeButtonTitles[searchController.searchBar.selectedScopeButtonIndex]
+    }
+    
     func didSelect(token: UISearchToken) {
         let searchTextField = searchController.searchBar.searchTextField
         searchTextField.insertToken(token, at: searchTextField.tokens.count)
         searchFor(searchController.searchBar.text)
         showScopeBar(true)
-        print("didselect - \(token)")
     }
-    
+        
     private func setActivityIndicator() {
         tableView.backgroundView = activityLabel
         activityLabel.hidesWhenStopped = true
@@ -209,13 +206,11 @@ extension CharactersViewController {
     func makeTokens() {
         let houses = Houses.allCases
         searchTokens = houses.map { (house) -> UISearchToken in
-          //  let tokenImage = UIImage(systemName: "house.fill")
             let label = UILabel(frame: CGRect(x: 0, y: 0, width: 23, height: 21))
             label.textAlignment = .center
             label.text = house.iconOfHouse
             label.sizeToFit()
             let tokenImage = UIImage.imageWithLabel(label: label)
-          //  let tokenImage = UIImage(contentsOfFile: house.iconOfHouse)
             let token = UISearchToken(icon: tokenImage, text: house.description)
             token.representedObject = Houses(rawValue: house.description)
             return token

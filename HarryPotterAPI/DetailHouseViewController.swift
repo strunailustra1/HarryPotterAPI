@@ -18,7 +18,6 @@ class DetailHouseViewController: UIViewController {
     @IBOutlet weak var headOfHouseLabel: UILabel!
     
     var house: House!
- //   var charactersOfHouse: Character!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,23 +30,18 @@ class DetailHouseViewController: UIViewController {
         navigationItem.title = house.name
         setMascot()
     }
-       
-    
-    @IBAction func showCharactersOfHouse(_ sender: Any) {
-    }
-    
-    private func setMascot() {
-        mascotNameLabel.layer.backgroundColor = house.emojiBackground
-        mascotNameLabel.layer.cornerRadius = mascotNameLabel.frame.width / 2
-    }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCVC" {
             let characterVC = segue.destination as! CharactersViewController
             characterVC.loadCharactersOnLoad = false
-            NetworkManager.shared.fetchMembersOfHouse(for: house.name ?? "", charactersVC: characterVC)
+            NetworkManager.shared.fetchCharacters(charactersVC: characterVC, for: house.name)
         }
     }
     
+    private func setMascot() {
+        mascotNameLabel.layer.backgroundColor = house.emojiBackground
+        mascotNameLabel.layer.cornerRadius = mascotNameLabel.frame.width / 2
+    }    
 }

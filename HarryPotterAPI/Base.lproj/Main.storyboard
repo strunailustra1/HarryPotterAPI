@@ -171,7 +171,6 @@
                                     <attributedString key="attributedTitle"/>
                                 </state>
                                 <connections>
-                                    <action selector="showCharactersOfHouse:" destination="aGx-qF-tuO" eventType="touchUpInside" id="efr-bf-KeX"/>
                                     <segue destination="le4-Lg-tQA" kind="show" identifier="showCVC" id="GC6-Wn-IXE"/>
                                 </connections>
                             </button>
