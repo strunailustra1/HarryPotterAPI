@@ -174,7 +174,7 @@ enum Houses: String, CaseIterable {
         case .slytherin:
             return CGColor(srgbRed: 0/255, green: 94/255, blue: 53/255, alpha: 1.0)
         case .hufflepuff:
-            return CGColor(srgbRed: 190/255, green: 60/255, blue: 36/255, alpha: 1.0)
+            return CGColor(srgbRed: 215/255, green: 187/255, blue: 71/255, alpha: 1.0)
        }
     }
     

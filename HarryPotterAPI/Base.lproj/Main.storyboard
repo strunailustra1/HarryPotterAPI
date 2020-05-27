@@ -158,26 +158,48 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Members of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCT-9V-XEU">
+                                <rect key="frame" x="30" y="413.5" width="92" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3G-F1-a77">
+                                <rect key="frame" x="124" y="410.5" width="26" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="house.fill" catalog="system">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCharactersOfHouse:" destination="aGx-qF-tuO" eventType="touchUpInside" id="efr-bf-KeX"/>
+                                    <segue destination="le4-Lg-tQA" kind="show" identifier="showCVC" id="GC6-Wn-IXE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="kCT-9V-XEU" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="30" id="4bT-35-1jK"/>
                             <constraint firstItem="3tc-vy-ImG" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="29" id="BEa-nK-i3I"/>
                             <constraint firstItem="zCj-VR-K3T" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="30" id="BUs-2j-O3i"/>
                             <constraint firstItem="T2O-dU-LzN" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="30" id="DIK-G3-hZM"/>
                             <constraint firstItem="ZRq-LO-qIu" firstAttribute="top" secondItem="T2O-dU-LzN" secondAttribute="bottom" constant="12" id="NH2-Bb-11T"/>
+                            <constraint firstItem="Y3G-F1-a77" firstAttribute="top" secondItem="3tc-vy-ImG" secondAttribute="bottom" constant="5" id="OvW-s9-hxw"/>
                             <constraint firstItem="0yK-gE-2Rl" firstAttribute="top" secondItem="EAQ-7I-p8P" secondAttribute="bottom" constant="6" id="PmI-R3-p8f"/>
                             <constraint firstItem="T2O-dU-LzN" firstAttribute="top" secondItem="zCj-VR-K3T" secondAttribute="bottom" constant="6" id="PrC-cU-Fy6"/>
                             <constraint firstItem="0Fu-nB-xX9" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="29" id="QZf-Pv-uoT"/>
+                            <constraint firstItem="81P-sq-kIG" firstAttribute="trailing" secondItem="Y3G-F1-a77" secondAttribute="trailing" constant="170" id="SbA-zh-oAj"/>
                             <constraint firstItem="81P-sq-kIG" firstAttribute="trailing" secondItem="EAQ-7I-p8P" secondAttribute="trailing" constant="30" id="UVe-Ck-Vmk"/>
                             <constraint firstItem="3tc-vy-ImG" firstAttribute="top" secondItem="0Fu-nB-xX9" secondAttribute="bottom" constant="6" id="XqZ-P1-Ntl"/>
                             <constraint firstAttribute="trailing" secondItem="3tc-vy-ImG" secondAttribute="trailing" constant="31" id="Y9C-FB-3DZ"/>
                             <constraint firstItem="ZRq-LO-qIu" firstAttribute="leading" secondItem="81P-sq-kIG" secondAttribute="leading" constant="30" id="ZqN-Oe-Tqj"/>
                             <constraint firstItem="81P-sq-kIG" firstAttribute="trailing" secondItem="T2O-dU-LzN" secondAttribute="trailing" constant="30" id="bmy-ou-lP6"/>
+                            <constraint firstItem="kCT-9V-XEU" firstAttribute="top" secondItem="3tc-vy-ImG" secondAttribute="bottom" constant="8" id="bvg-xV-UGd"/>
                             <constraint firstItem="81P-sq-kIG" firstAttribute="trailing" secondItem="zCj-VR-K3T" secondAttribute="trailing" constant="30" id="cR8-nX-AVu"/>
                             <constraint firstItem="81P-sq-kIG" firstAttribute="trailing" secondItem="ZRq-LO-qIu" secondAttribute="trailing" constant="30" id="cbD-b1-F6R"/>
                             <constraint firstItem="EAQ-7I-p8P" firstAttribute="leading" secondItem="PZG-Ub-Lb3" secondAttribute="leading" constant="30" id="gbG-VS-yXL"/>
                             <constraint firstItem="EAQ-7I-p8P" firstAttribute="top" secondItem="81P-sq-kIG" secondAttribute="top" constant="6" id="hJT-Le-bxS"/>
                             <constraint firstItem="0Fu-nB-xX9" firstAttribute="top" secondItem="ZRq-LO-qIu" secondAttribute="bottom" constant="6" id="mP0-Xd-utR"/>
+                            <constraint firstItem="Y3G-F1-a77" firstAttribute="leading" secondItem="kCT-9V-XEU" secondAttribute="trailing" constant="2" id="mi7-fN-Aq3"/>
                             <constraint firstItem="81P-sq-kIG" firstAttribute="trailing" secondItem="0Fu-nB-xX9" secondAttribute="trailing" constant="31" id="q8f-Ga-ngn"/>
                             <constraint firstItem="0yK-gE-2Rl" firstAttribute="centerX" secondItem="PZG-Ub-Lb3" secondAttribute="centerX" id="t7I-Ar-gvB"/>
                             <constraint firstItem="zCj-VR-K3T" firstAttribute="top" secondItem="0yK-gE-2Rl" secondAttribute="bottom" constant="6" id="wdc-a6-XXr"/>
@@ -198,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ij4-F0-QXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1898" y="56"/>
+            <point key="canvasLocation" x="1897.5" y="55.985915492957744"/>
         </scene>
         <!--Houses-->
         <scene sceneID="Uf6-ka-2TA">
@@ -338,7 +360,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTg-gb-Vxe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408.75" y="837.67605633802816"/>
+            <point key="canvasLocation" x="409" y="858"/>
         </scene>
         <!--Detail Character View Controller-->
         <scene sceneID="PNb-pt-BRK">
@@ -565,7 +587,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4U4-I4-Y82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177.5" y="837.67605633802816"/>
+            <point key="canvasLocation" x="1161" y="858"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XT3-lL-dIf">
@@ -604,9 +626,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHB-py-n99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426" y="838"/>
+            <point key="canvasLocation" x="-443" y="858"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GC6-Wn-IXE"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>

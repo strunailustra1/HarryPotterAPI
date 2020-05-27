@@ -18,7 +18,8 @@ class DetailHouseViewController: UIViewController {
     @IBOutlet weak var headOfHouseLabel: UILabel!
     
     var house: House!
-
+ //   var charactersOfHouse: Character!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mascotNameLabel.text = house.emoji
@@ -27,9 +28,12 @@ class DetailHouseViewController: UIViewController {
         founderLabel.text = house.founder
         headOfHouseLabel.text = house.headOfHouse
         houseGhostLabel.text = house.houseGhost
-        
         navigationItem.title = house.name
         setMascot()
+    }
+       
+    
+    @IBAction func showCharactersOfHouse(_ sender: Any) {
     }
     
     private func setMascot() {
@@ -37,13 +41,13 @@ class DetailHouseViewController: UIViewController {
         mascotNameLabel.layer.cornerRadius = mascotNameLabel.frame.width / 2
     }
     
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showCVC" {
+            let characterVC = segue.destination as! CharactersViewController
+            characterVC.loadCharactersOnLoad = false
+            NetworkManager.shared.fetchMembersOfHouse(for: house.name ?? "", charactersVC: characterVC)
+        }
     }
-    */
+    
 }

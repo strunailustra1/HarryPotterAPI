@@ -16,7 +16,6 @@ class HousesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkManager.shared.fetchHouses(housesVC: self)
-
         setActivityIndicator()
         setNavigationController()
     }

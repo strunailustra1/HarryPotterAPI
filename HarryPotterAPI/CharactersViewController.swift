@@ -19,6 +19,9 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
         }
     }
     
+    var loadCharactersOnLoad = true
+    
+    var characters: [Character] = []
     var charactersFromApi: [Character] = []
     var searchTokens: [UISearchToken] = []
     
@@ -42,10 +45,15 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     var isSearchingByName: Bool {
         return searchController.isActive && !(searchController.searchBar.text?.isEmpty ?? true)
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.shared.fetchCharacters(charactersVC: self)
+        
+        if loadCharactersOnLoad {
+            NetworkManager.shared.fetchCharacters(charactersVC: self)
+        }
+        
         setNavigationController()
         setActivityIndicator()
         setSearchBar()
@@ -125,8 +133,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
     
     func updateSearchResults(for searchController: UISearchController) {
         if searchController.searchBar.searchTextField.isFirstResponder {
-            searchController.searchBar
-                .searchTextField.backgroundColor = UIColor(red: 0/255, green: 105/255, blue: 55/255, alpha: 0.1)
             
             if (!isSearchingByTokens && !isSearchingByName && searchController.isActive) {
                 charactersForTable = nil
@@ -134,6 +140,12 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
         } else {
             charactersForTable = charactersFromApi
             searchController.searchBar.searchTextField.backgroundColor = nil
+        }
+        
+        if let house = searchController.searchBar.searchTextField.tokens.first?.representedObject as? Houses {
+            searchController.searchBar.searchTextField.tokenBackgroundColor = UIColor(cgColor: house.colorOfHouse)
+            searchController.searchBar.searchTextField.backgroundColor = UIColor(cgColor: house.colorOfHouse).withAlphaComponent(0.1)
+            searchController.searchBar.searchTextField.textColor = UIColor(cgColor: house.colorOfHouse)
         }
     }
     
@@ -176,6 +188,7 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
         searchTextField.insertToken(token, at: searchTextField.tokens.count)
         searchFor(searchController.searchBar.text)
         showScopeBar(true)
+        print("didselect - \(token)")
     }
     
     private func setActivityIndicator() {
@@ -197,10 +210,27 @@ extension CharactersViewController {
         let houses = Houses.allCases
         searchTokens = houses.map { (house) -> UISearchToken in
           //  let tokenImage = UIImage(systemName: "house.fill")
-            let tokenImage = UIImage(contentsOfFile: house.iconOfHouse)
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 23, height: 21))
+            label.textAlignment = .center
+            label.text = house.iconOfHouse
+            label.sizeToFit()
+            let tokenImage = UIImage.imageWithLabel(label: label)
+          //  let tokenImage = UIImage(contentsOfFile: house.iconOfHouse)
             let token = UISearchToken(icon: tokenImage, text: house.description)
             token.representedObject = Houses(rawValue: house.description)
             return token
         }
     }
 }
+
+extension UIImage {
+    class func imageWithLabel(label: UILabel) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, 0.0)
+        label.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return img!
+   }
+}
+
+
