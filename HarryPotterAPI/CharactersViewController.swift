@@ -69,7 +69,7 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
             cell.nameLabel.text = charactersForTable?[indexPath.row].name
             cell.aliasLabel.text = charactersForTable?[indexPath.row].alias
             cell.roleLabel.text = charactersForTable?[indexPath.row].role
-            cell.bloodStatusLabel.text = charactersForTable?[indexPath.row].bloodStatus
+          //  cell.bloodStatusLabel.text = charactersForTable?[indexPath.row].bloodStatus
             return cell
         } else if let cell = tableView.dequeueReusableCell(withIdentifier: "houseCellChar", for: indexPath) as? SearchTokenViewCell {
             cell.token = searchTokens[indexPath.row]
@@ -166,6 +166,7 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
         navigationItem.searchController = searchController
         searchController.searchBar.scopeButtonTitles = BloodStatus.allCases.map {$0.description}
         searchController.searchBar.setScopeBarButtonTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Didot", size: 8.0) as Any ], for: UIControl.State.normal)
+        searchController.searchBar.searchTextField.font = UIFont(name: "Didot", size: 17.0)
     }
     
     func showScopeBar(_ show: Bool) {
@@ -227,5 +228,3 @@ extension UIImage {
         return img!
    }
 }
-
-

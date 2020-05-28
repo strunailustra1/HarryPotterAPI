@@ -147,8 +147,8 @@ enum BloodStatus: String, CaseIterable {
     case noType = "all"
     case pureBlood = "pure-blood"
     case halfBlood = "half-blood"
-    case unknown = "unknown"
     case mugleBorn = "muggle-born"
+    case unknown = "unknown"
     
     var description: String {
         rawValue.description

@@ -11,6 +11,6 @@ import UIKit
 class CharacterViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var roleLabel: UILabel!
-    @IBOutlet weak var bloodStatusLabel: UILabel!
+ //   @IBOutlet weak var bloodStatusLabel: UILabel!
     @IBOutlet weak var aliasLabel: UILabel!
 }
