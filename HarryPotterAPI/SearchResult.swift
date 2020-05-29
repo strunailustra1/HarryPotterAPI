@@ -7,12 +7,12 @@
 //
 import UIKit
 
-struct SearchResult: Decodable {
+struct SearchResult: Codable {
     let house: [House]?
     let character: [Character]?
 }
 
-struct House: Decodable {
+struct House: Codable {
     let id: String?
     let name: String?
     let mascot : String?
@@ -50,7 +50,7 @@ struct House: Decodable {
     }
 }
 
-struct Character: Decodable {
+struct Character: Codable {
     let id: String?
     let name: String?
     let role: String?
@@ -175,7 +175,7 @@ enum Houses: String, CaseIterable {
             return CGColor(srgbRed: 0/255, green: 94/255, blue: 53/255, alpha: 1.0)
         case .hufflepuff:
             return CGColor(srgbRed: 215/255, green: 187/255, blue: 71/255, alpha: 1.0)
-       }
+        }
     }
     
     var iconOfHouse: String {

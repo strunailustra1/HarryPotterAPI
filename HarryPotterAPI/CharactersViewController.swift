@@ -119,7 +119,6 @@ class CharactersViewController: UITableViewController, UISearchBarDelegate, UISe
             return false
         }
         charactersForTable = filteredCharacters.count > 0 ? filteredCharacters : nil
-        print("Установили charactersForTable = " + String(charactersForTable?.count ?? 0) + " штук")
     }
     
     func updateSearchResults(for searchController: UISearchController) {

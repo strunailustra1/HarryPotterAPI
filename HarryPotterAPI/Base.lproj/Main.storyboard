@@ -295,20 +295,20 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="houseCellChar" id="C4V-ir-y06" customClass="SearchTokenViewCell" customModule="HarryPotterAPI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="102" width="320" height="43"/>
+                                <rect key="frame" x="0.0" y="102" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C4V-ir-y06" id="Kc2-QR-cwv">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iA-Ps-Pvg">
-                                            <rect key="frame" x="34" y="10" width="43.5" height="24"/>
+                                            <rect key="frame" x="34" y="10" width="43.5" height="24.5"/>
                                             <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🦁" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9H-p6-Bys">
-                                            <rect key="frame" x="7" y="12" width="23" height="21"/>
+                                            <rect key="frame" x="7" y="12" width="23" height="21.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -569,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4U4-I4-Y82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="858"/>
+            <point key="canvasLocation" x="1160.625" y="857.74647887323943"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XT3-lL-dIf">
